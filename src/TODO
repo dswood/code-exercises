@@ -1,9 +1,9 @@
-check this in
 check in the scheme compiler
 define vars in CMAKE
-
+MySqrt.cpp to a CMAKE library
 
 
 interesting lessons
 * all libraries start with lib, but they get referenced without this, e.g. libgtest should be referred to as gtest in the linker
 * inline function defs need to be in a header or some other included file
+* nm to list the symbols in a .o/.a file

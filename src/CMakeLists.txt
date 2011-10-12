@@ -15,11 +15,16 @@ configure_file (
 # so that we will find TutorialConfig.h
 include_directories("${PROJECT_BINARY_DIR}")
 include_directories("../gtest-1.6.0/include")
+
+add_subdirectory(MySqrt)
  
 link_directories("../gtest-1.6.0/gtest-bin/")
 
 # add the executable
-add_executable(TutorialTest SimpleTest.cpp MySqrt.cpp)
-target_link_libraries(TutorialTest gtest)
+add_executable(TutorialTest SimpleTest.cpp)
 
-add_executable(Tutorial Tutorial.cpp MySqrt.cpp)
+target_link_libraries(TutorialTest gtest)
+target_link_libraries(TutorialTest sqrt)
+
+add_executable(Tutorial Tutorial.cpp)
+target_link_libraries(Tutorial sqrt)

@@ -69,14 +69,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/loaner/projects/code-exercises/src/CMakeFiles /Users/loaner/projects/code-exercises/src/CMakeFiles/progress.marks
-	$(MAKE) -f CMakeFiles/Makefile2 all
+	cd /Users/loaner/projects/code-exercises/src && $(CMAKE_COMMAND) -E cmake_progress_start /Users/loaner/projects/code-exercises/src/CMakeFiles /Users/loaner/projects/code-exercises/src/MySqrt/CMakeFiles/progress.marks
+	cd /Users/loaner/projects/code-exercises/src && $(MAKE) -f CMakeFiles/Makefile2 MySqrt/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/loaner/projects/code-exercises/src/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	$(MAKE) -f CMakeFiles/Makefile2 clean
+	cd /Users/loaner/projects/code-exercises/src && $(MAKE) -f CMakeFiles/Makefile2 MySqrt/clean
 .PHONY : clean
 
 # The main clean target
@@ -85,105 +85,56 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	$(MAKE) -f CMakeFiles/Makefile2 preinstall
+	cd /Users/loaner/projects/code-exercises/src && $(MAKE) -f CMakeFiles/Makefile2 MySqrt/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	$(MAKE) -f CMakeFiles/Makefile2 preinstall
+	cd /Users/loaner/projects/code-exercises/src && $(MAKE) -f CMakeFiles/Makefile2 MySqrt/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	$(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /Users/loaner/projects/code-exercises/src && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
-#=============================================================================
-# Target rules for targets named Tutorial
+# Convenience name for target.
+MySqrt/CMakeFiles/sqrt.dir/rule:
+	cd /Users/loaner/projects/code-exercises/src && $(MAKE) -f CMakeFiles/Makefile2 MySqrt/CMakeFiles/sqrt.dir/rule
+.PHONY : MySqrt/CMakeFiles/sqrt.dir/rule
 
-# Build rule for target.
-Tutorial: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 Tutorial
-.PHONY : Tutorial
-
-# fast build rule for target.
-Tutorial/fast:
-	$(MAKE) -f CMakeFiles/Tutorial.dir/build.make CMakeFiles/Tutorial.dir/build
-.PHONY : Tutorial/fast
-
-#=============================================================================
-# Target rules for targets named TutorialTest
-
-# Build rule for target.
-TutorialTest: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 TutorialTest
-.PHONY : TutorialTest
-
-# fast build rule for target.
-TutorialTest/fast:
-	$(MAKE) -f CMakeFiles/TutorialTest.dir/build.make CMakeFiles/TutorialTest.dir/build
-.PHONY : TutorialTest/fast
-
-#=============================================================================
-# Target rules for targets named sqrt
-
-# Build rule for target.
-sqrt: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 sqrt
+# Convenience name for target.
+sqrt: MySqrt/CMakeFiles/sqrt.dir/rule
 .PHONY : sqrt
 
 # fast build rule for target.
 sqrt/fast:
-	$(MAKE) -f MySqrt/CMakeFiles/sqrt.dir/build.make MySqrt/CMakeFiles/sqrt.dir/build
+	cd /Users/loaner/projects/code-exercises/src && $(MAKE) -f MySqrt/CMakeFiles/sqrt.dir/build.make MySqrt/CMakeFiles/sqrt.dir/build
 .PHONY : sqrt/fast
 
-SimpleTest.o: SimpleTest.cpp.o
-.PHONY : SimpleTest.o
+MySqrt.o: MySqrt.cpp.o
+.PHONY : MySqrt.o
 
 # target to build an object file
-SimpleTest.cpp.o:
-	$(MAKE) -f CMakeFiles/TutorialTest.dir/build.make CMakeFiles/TutorialTest.dir/SimpleTest.cpp.o
-.PHONY : SimpleTest.cpp.o
+MySqrt.cpp.o:
+	cd /Users/loaner/projects/code-exercises/src && $(MAKE) -f MySqrt/CMakeFiles/sqrt.dir/build.make MySqrt/CMakeFiles/sqrt.dir/MySqrt.cpp.o
+.PHONY : MySqrt.cpp.o
 
-SimpleTest.i: SimpleTest.cpp.i
-.PHONY : SimpleTest.i
-
-# target to preprocess a source file
-SimpleTest.cpp.i:
-	$(MAKE) -f CMakeFiles/TutorialTest.dir/build.make CMakeFiles/TutorialTest.dir/SimpleTest.cpp.i
-.PHONY : SimpleTest.cpp.i
-
-SimpleTest.s: SimpleTest.cpp.s
-.PHONY : SimpleTest.s
-
-# target to generate assembly for a file
-SimpleTest.cpp.s:
-	$(MAKE) -f CMakeFiles/TutorialTest.dir/build.make CMakeFiles/TutorialTest.dir/SimpleTest.cpp.s
-.PHONY : SimpleTest.cpp.s
-
-Tutorial.o: Tutorial.cpp.o
-.PHONY : Tutorial.o
-
-# target to build an object file
-Tutorial.cpp.o:
-	$(MAKE) -f CMakeFiles/Tutorial.dir/build.make CMakeFiles/Tutorial.dir/Tutorial.cpp.o
-.PHONY : Tutorial.cpp.o
-
-Tutorial.i: Tutorial.cpp.i
-.PHONY : Tutorial.i
+MySqrt.i: MySqrt.cpp.i
+.PHONY : MySqrt.i
 
 # target to preprocess a source file
-Tutorial.cpp.i:
-	$(MAKE) -f CMakeFiles/Tutorial.dir/build.make CMakeFiles/Tutorial.dir/Tutorial.cpp.i
-.PHONY : Tutorial.cpp.i
+MySqrt.cpp.i:
+	cd /Users/loaner/projects/code-exercises/src && $(MAKE) -f MySqrt/CMakeFiles/sqrt.dir/build.make MySqrt/CMakeFiles/sqrt.dir/MySqrt.cpp.i
+.PHONY : MySqrt.cpp.i
 
-Tutorial.s: Tutorial.cpp.s
-.PHONY : Tutorial.s
+MySqrt.s: MySqrt.cpp.s
+.PHONY : MySqrt.s
 
 # target to generate assembly for a file
-Tutorial.cpp.s:
-	$(MAKE) -f CMakeFiles/Tutorial.dir/build.make CMakeFiles/Tutorial.dir/Tutorial.cpp.s
-.PHONY : Tutorial.cpp.s
+MySqrt.cpp.s:
+	cd /Users/loaner/projects/code-exercises/src && $(MAKE) -f MySqrt/CMakeFiles/sqrt.dir/build.make MySqrt/CMakeFiles/sqrt.dir/MySqrt.cpp.s
+.PHONY : MySqrt.cpp.s
 
 # Help Target
 help:
@@ -191,17 +142,12 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... Tutorial"
-	@echo "... TutorialTest"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... sqrt"
-	@echo "... SimpleTest.o"
-	@echo "... SimpleTest.i"
-	@echo "... SimpleTest.s"
-	@echo "... Tutorial.o"
-	@echo "... Tutorial.i"
-	@echo "... Tutorial.s"
+	@echo "... MySqrt.o"
+	@echo "... MySqrt.i"
+	@echo "... MySqrt.s"
 .PHONY : help
 
 
@@ -213,6 +159,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	$(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /Users/loaner/projects/code-exercises/src && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 
