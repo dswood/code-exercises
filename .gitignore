@@ -2,3 +2,4 @@
 CMakeFiles/
 *Tutorial
 *TutorialTest
+*.a
